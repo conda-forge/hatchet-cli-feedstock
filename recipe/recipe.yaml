@@ -1,5 +1,5 @@
 context:
-  version: "0.86.25"
+  version: "0.86.29"
 
 package:
   name: hatchet-cli
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/hatchet-dev/hatchet/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 0b03d7876f15b487e2326297ac279160a3b94fc384b1fcfce33c3b69e99d61ce
+    sha256: ef5ca2ccdbfbb48f21db91806f8edf8516f409d392a6825d02acd3cd7716b3fa
     target_directory: src
   - url: https://raw.githubusercontent.com/mattn/go-localereader/6bae6c923850ab5e0da9f36f69811ffe17064228/LICENSE
     sha256: dceede03550621e65ec7b79fcba87cf6dbb9d31132a8ae71a8fe8ceec0af7da3
@@ -29,8 +29,8 @@ requirements:
 
 tests:
   - script:
-    - hatchet --version
-    - hatchet --help
+      - hatchet --version
+      - hatchet --help
   - package_contents:
       bin:
         - hatchet
